@@ -1,6 +1,10 @@
-BIN=realpath
-compile:
-	gcc -Wall -o ${BIN} ${BIN}.c
-install:
-	cp -f ${BIN} /usr/bin/${BIN}
+PREFIX=/usr/local/bin
+PROG=realpath
 
+.PHONY: install
+
+${PROG}: ${PROG}.c
+	gcc -Wall -o $@ $^
+
+install:
+	cp -f ${PROG} ${PREFIX}/${PROG}
