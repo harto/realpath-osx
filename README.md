@@ -9,8 +9,3 @@ To install:
 
     $ make
     $ make install # may need sudo
-
-To install with CMake:
-
-    $ cmake .
-    $ make && sudo make install
